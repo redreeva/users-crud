@@ -1,0 +1,23 @@
+.navbar {
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  padding: 0;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.navbar-brand i {
+  font-size: 40px;
+}
+
+.navbar .btn.btn-link {
+  color: #fff;
+  transition: color .2s ease-in;
+}
+
+.navbar .btn.btn-link:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, .5);
+}
