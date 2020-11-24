@@ -32,49 +32,50 @@ export const UsersTable = () => {
   }
 
   return (
-    <div className="view-table">
+    <div className="container-md">
 
       <h2>Users Table</h2>
-
+      
       <UsersFilter/>
 
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Username</th>
-            <th scope="col">Email</th>
-            <th scope="col">Address</th>
-            <th scope="col">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {filteredUsers.map((user, index) => {
-            const address = user.address && 
-              `${(user.address.street || '')} 
-              ${(user.address.suite || '')}
-              ${(user.address.city || '')}` 
+      <div className="view-table">
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Username</th>
+              <th scope="col">Email</th>
+              <th scope="col">Address</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredUsers.map((user, index) => {
+              const address = user.address && 
+                `${(user.address.street || '')} 
+                ${(user.address.suite || '')}
+                ${(user.address.city || '')}` 
 
-            return (
-              <tr key={user.id}>
-                <th scope="row">{index + 1}</th>
-                <td>{user.username}</td>
-                <td>{user.email}</td>
-                <td>{address || ''}</td>
-                <td>
-                  <button onClick={() => dispatch(showModal(user))}>
-                    <i className="material-icons">edit</i>
-                  </button>
-                  <button onClick={() => deleteItem(user.id)}>
-                    <i className="material-icons">delete</i>
-                  </button>
-                </td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
-
+              return (
+                <tr key={user.id}>
+                  <th scope="row">{index + 1}</th>
+                  <td>{user.username}</td>
+                  <td>{user.email}</td>
+                  <td>{address || ''}</td>
+                  <td>
+                    <button onClick={() => dispatch(showModal(user))}>
+                      <i className="material-icons">edit</i>
+                    </button>
+                    <button onClick={() => deleteItem(user.id)}>
+                      <i className="material-icons">delete</i>
+                    </button>
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }

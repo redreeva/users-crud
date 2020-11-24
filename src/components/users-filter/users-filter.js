@@ -14,12 +14,11 @@ export const UsersFilter = () => {
   }
   
   return (
-    <form>
+    <form className="filter-form">
       <div className="form-group">
         <label htmlFor="filter">Filter users: </label>
         <input type="text" name="filter" 
-          value={filter} 
-          className="mx-sm-3"
+          value={filter}
           onChange={onFilter} />
       </div>
     </form>    

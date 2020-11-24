@@ -58,7 +58,7 @@ export const ModalForm = () => {
   return (
     <form onSubmit={submitHandler}>
       <div className="row">
-        <div className="form-group col-md-6">
+        <div className="form-group col-sm-6">
           <small className="form-text text-muted">Username</small>
           <input type="text" 
             className="form-control" 
@@ -67,7 +67,7 @@ export const ModalForm = () => {
             value={username}
             onChange={e => setUsername(e.target.value)} />
         </div>
-        <div className="form-group col-md-6">
+        <div className="form-group col-sm-6">
           <small className="form-text text-muted">Email</small>
           <input type="text" 
             className="form-control" 
@@ -77,20 +77,18 @@ export const ModalForm = () => {
             onChange={e => setEmail(e.target.value)} />
         </div>
       </div>
-
-      <div className="form-group">
-        <small className="form-text text-muted">City</small>
-        <input type="text" 
-          className="form-control" 
-          name="city" 
-          placeholder="City"
-          value={city}
-          onChange={e => setCity(e.target.value)} />
-      </div>
-
       
       <div className="row">
-        <div className="form-group col-md-6">
+        <div className="form-group col-sm-4">
+          <small className="form-text text-muted">City</small>
+          <input type="text" 
+            className="form-control" 
+            name="city" 
+            placeholder="City"
+            value={city}
+            onChange={e => setCity(e.target.value)} />
+        </div>
+        <div className="form-group col-sm-5">
           <small className="form-text text-muted">Street</small>
           <input type="text" 
             className="form-control" 
@@ -99,7 +97,7 @@ export const ModalForm = () => {
             value={street}
             onChange={e => setStreet(e.target.value)} />
         </div>
-        <div className="form-group col-md-6">
+        <div className="form-group col-sm-3">
           <small className="form-text text-muted">Suite</small>
           <input type="text" 
             className="form-control" 

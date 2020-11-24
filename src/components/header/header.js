@@ -7,12 +7,14 @@ export const Header = () => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="navbar-brand"><i className="medium material-icons">recent_actors</i></div>
-    
-      <button type="button" 
-        className="btn btn-link"
-        onClick={() => dispatch(showModal())}
-      >+ New User</button>
+      <div className="container-md">
+        <div className="navbar-brand"><i className="medium material-icons">recent_actors</i></div>
+      
+        <button type="button" 
+          className="btn btn-link"
+          onClick={() => dispatch(showModal())}
+        >+ New User</button>
+      </div>
     </nav>
   )
 }
